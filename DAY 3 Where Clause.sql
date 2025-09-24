@@ -100,7 +100,13 @@ WHERE emp_dept IS NULL;
 SELECT * FROM employee
 WHERE emp_dept IS NOT NULL;
 
+-- The IN operator allows you to specify multiple values in a WHERE clause.
+SELECT * FROM employee
+WHERE emp_dept IN ('HR', 'Finance', 'Sales');
 
+-- The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+SELECT * FROM employee
+WHERE emp_salary BETWEEN 50000 AND 70000;
 
 -- Retrieve all employees whose age is less than 30.
 select * from employee where age <30;
