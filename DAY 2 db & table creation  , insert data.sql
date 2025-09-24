@@ -81,5 +81,33 @@ VALUES
 
 select product_name , price from products ;
 
+DROP TABLE student ;  -- to delete an entire table from database
+
+TRUNCATE TABLE products;  --  The TRUNCATE TABLE statement is used to delete the data inside a table, but not the table itself.
+
+
+-- The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+-- The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+ALTER TABLE products 
+ADD COLUMN product_desc text;  -- to add new column
+ 
+ALTER TABLE products   
+DROP COLUMN product_desc;   -- to delete certain column
+
+ALTER TABLE products 
+RENAME COLUMN product_name to name;    -- to rename 
+
+ALTER TABLE products 
+MODIFY COLUMN name varchar(100); --  to change the data type
+
+
+-- The UPDATE statement is used to modify the existing records in a table.
+UPDATE products 
+SET name = 'TV' , price = 50000 
+WHERE product_id = 101;
+
+-- The DELETE statement is used to delete existing records in a table.
+DELETE FROM products WHERE product_id=108;
+
 
 
